@@ -393,7 +393,7 @@
 // If your configuration is significantly different than this and you don't understand the issues involved, you probably
 // shouldn't use bed PID until someone else verifies your hardware works.
 // If this is enabled, find your own PID constants below.
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -408,9 +408,14 @@
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
   //12v (120 watt?) MK2a PCB Heatbed into 4mm borosilicate (Geeetech Prusa i3 Pro, Pro/B/C/X)
-  #define  DEFAULT_bedKp 234.88
-  #define  DEFAULT_bedKi 42.79
-  #define  DEFAULT_bedKd 322.28
+  //#define  DEFAULT_bedKp 234.88
+  //#define  DEFAULT_bedKi 42.79
+  //#define  DEFAULT_bedKd 322.28
+  
+  //PID autotune to 90deg with Basotect isolation
+  #define  DEFAULT_bedKp 264.40
+  #define  DEFAULT_bedKi 52.06
+  #define  DEFAULT_bedKd 335.72
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
